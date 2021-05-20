@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AppointmentForm } from "../appointmentForm/AppointmentForm";
+import { AppointmentForm } from "../../components/appointmentForm/AppointmentForm";
 import { TileList } from "../../components/tileList/TileList";
 
 export const AppointmentsPage = ({
@@ -23,7 +23,7 @@ export const AppointmentsPage = ({
     */
     addAppointment(title, contact, date, time);
     setTitle("");
-    setContact("");
+    setContact(null);
     setDate("");
     setTime("");
   };
@@ -42,12 +42,13 @@ export const AppointmentsPage = ({
           setDate={setDate}
           setTime={setTime}
           handleSubmit={handleSubmit}
+          contacts={contacts}
         />
       </section>
       <hr />
       <section>
         <h2>Appointments</h2>
-        <TileList />
+        <TileList tiles={appointments} />
       </section>
     </div>
   );

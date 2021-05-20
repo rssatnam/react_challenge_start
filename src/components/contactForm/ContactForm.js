@@ -22,6 +22,7 @@ export const ContactForm = ({
       setEmail(targetValue);
     }
   };
+
   return (
     <form onSubmit={handleSubmit}>
       <input

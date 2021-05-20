@@ -1,8 +1,8 @@
 import React from "react";
 import { Tile } from "../tile/Tile";
 
-export const TileList = ({ contacts }) => {
-  return contacts.map((contact, index) => {
-    return <Tile contact={contact} key={index} />;
+export const TileList = ({ tiles }) => {
+  return tiles.map((tile, index) => {
+    return <Tile tile={tile} key={index} />;
   });
 };
